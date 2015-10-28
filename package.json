@@ -1,0 +1,28 @@
+{
+  "name": "node-wechat-terminal",
+  "version": "1.0.0",
+  "description": "Wechat client in terminal",
+  "main": "lib/cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node lib/cli.js"
+  },
+  "keywords": [
+    "wechat",
+    "terminal"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goorockey/node-wechat-terminal.git"
+  },
+  "author": "goorockey",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/goorockey/node-wechat-terminal/issues"
+  },
+  "homepage": "https://github.com/goorockey/node-wechat-terminal#readme",
+  "dependencies": {
+    "lodash": "^3.10.1",
+    "request-promise": "^1.0.2"
+  }
+}

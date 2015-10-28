@@ -1,2 +1,2 @@
 # node-wechat-terminal
-Wechat in terminal
+Wechat client in terminal
