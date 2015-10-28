@@ -2,10 +2,10 @@
   "name": "node-wechat-terminal",
   "version": "1.0.0",
   "description": "Wechat client in terminal",
-  "main": "lib/cli.js",
+  "main": "cli.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node lib/cli.js"
+    "start": "node cli.js"
   },
   "keywords": [
     "wechat",
@@ -23,6 +23,10 @@
   "homepage": "https://github.com/goorockey/node-wechat-terminal#readme",
   "dependencies": {
     "lodash": "^3.10.1",
-    "request-promise": "^1.0.2"
+    "qrcode-terminal": "^0.10.0",
+    "request-promise": "^1.0.2",
+    "tough-cookie-filestore": "0.0.1",
+    "winston": "^1.1.1",
+    "xml2js": "^0.4.13"
   }
 }
