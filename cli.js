@@ -15,6 +15,8 @@ wechat.on('err', () => { rl.close(); });
 wechat.on('chat_change', (chat) => { updatePrompt(wechat.user, chat); });
 
 wechat.on('login', function(user) {
+  logger.info('Login successfully.');
+
   updatePrompt(user);
   rl.prompt();
 
@@ -35,7 +37,10 @@ wechat.on('login', function(user) {
     });
   });
 });
-wechat.on('logout', () => { rl.close(); });
+wechat.on('logout', function() {
+  logger.info('Logout.');
+  rl.close();
+});
 
 wechat.login();
 
