@@ -12,7 +12,12 @@ var rl = readline.createInterface({
 });
 
 wechat.on('err', () => { rl.close(); });
-wechat.on('chat_change', (chat) => { updatePrompt(wechat.user, chat); });
+wechat.on('chat_change', (chat) => { updatePrompt(wechat.user); });
+
+wechat.on('logout', function() {
+  logger.info('Logout.');
+  rl.close();
+});
 
 wechat.on('login', function(user) {
   logger.info('Login successfully.');
@@ -37,17 +42,13 @@ wechat.on('login', function(user) {
     });
   });
 });
-wechat.on('logout', function() {
-  logger.info('Logout.');
-  rl.close();
-});
 
 wechat.login();
 
-function updatePrompt(user, chat) {
-  user = user || '';
-  chat = chat || '';
-  rl.setPrompt(((user + chat) || 'wechat') + '> ');
+function updatePrompt(user) {
+  var name = user.NickName || '';
+  var chat = user.chat || '';
+  rl.setPrompt(((name + chat) || 'wechat') + '> ');
 }
 
 function parseCmd(cmd) {
