@@ -50,8 +50,8 @@ function startConsole(user) {
 }
 
 function updatePrompt(user) {
-  var name = user.NickName || '';
-  var chat = user.chat || '';
+  var name = user && user.NickName || '';
+  var chat = user && user.chat && user.chat.NickName || '';
   rl.setPrompt(((name + chat) || 'wechat') + '> ');
 }
 
