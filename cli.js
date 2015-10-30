@@ -17,7 +17,7 @@ var rl = readline.createInterface({
 
 
 wechat.on('err', () => { rl.close(); });
-wechat.on('chat_change', (chat) => { updatePrompt(wechat.user); });
+wechat.on('chat_change', () => { updatePrompt(); });
 
 wechat.on('logout', function() {
   logger.info('Logout.');
@@ -30,7 +30,7 @@ wechat.login();
 function startConsole(user) {
   logger.info('Login successfully.');
 
-  updatePrompt(user);
+  updatePrompt();
   rl.prompt();
 
   rl.on('line', function(msg) {
@@ -49,9 +49,9 @@ function startConsole(user) {
   });
 }
 
-function updatePrompt(user) {
-  var name = user && user.NickName || '';
-  var chat = user && user.chat && user.chat.NickName || '';
+function updatePrompt() {
+  var name = !_.isEmpty(wechat.user) && wechat.user.NickName || '';
+  var chat = !_.isEmpty(wechat.chat) && wechat.chat.NickName ? ' => ' + wechat.chat.NickName : '';
   rl.setPrompt(((name + chat) || 'wechat') + '> ');
 }
 
