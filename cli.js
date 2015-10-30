@@ -44,6 +44,8 @@ function startConsole(user) {
         rl.prompt();
       }
     });
+  }).on('close', function() {
+    wechat.logout().then(() => { process.exit(0); });
   });
 }
 
