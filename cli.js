@@ -33,20 +33,28 @@ function startConsole(user) {
   updatePrompt();
   rl.prompt();
 
-  rl.on('line', function(msg) {
-    commands.parse(msg, wechat);
-    rl.prompt();
-  }).on('SIGINT', function() {
-    rl.question('Are you sure you want to exit?(y/N)', function(answer) {
-      if (answer.match(/^y(es)?$/i)) {
-        rl.close();
-      } else {
-        rl.prompt();
-      }
-    });
-  }).on('close', function() {
-    wechat.logout().then(() => { process.exit(0); });
+  rl.on('line', onUserInput)
+  .on('SIGINT', onPreExit)
+  .on('close', onExit);
+}
+
+function onUserInput(msg) {
+  commands.parse(msg, wechat);
+  rl.prompt();
+}
+
+function onPreExit() {
+  rl.question('Are you sure you want to exit?(y/N)', function(answer) {
+    if (answer.match(/^y(es)?$/i)) {
+      rl.close();
+    } else {
+      rl.prompt();
+    }
   });
+}
+
+function onExit() {
+  wechat.logout().then(() => { process.exit(0); });
 }
 
 function updatePrompt() {
