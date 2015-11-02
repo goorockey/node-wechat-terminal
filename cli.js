@@ -57,9 +57,16 @@ function onExit() {
 }
 
 function updatePrompt() {
-  var name = !_.isEmpty(wechat.user) && wechat.user.NickName || '';
-  var chat = !_.isEmpty(wechat.chat) && wechat.chat.NickName ? ' => ' + wechat.chat.NickName : '';
-  rl.setPrompt(((name + chat) || 'wechat') + '> ');
+  var prompt = 'wechat';
+  if (wechat.isLogined()) {
+    prompt = wechat.getUser();
+
+    var chat = wechat.getChat();
+    if (chat) {
+      prompt += ' => ' + chat;
+    }
+  }
+  rl.setPrompt(prompt + '> ');
 }
 
 function completer(line) {
