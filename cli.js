@@ -18,13 +18,12 @@ var rl = readline.createInterface({
 
 wechat.on('err', () => { rl.close(); });
 wechat.on('chat_change', () => { updatePrompt(); });
-
-wechat.on('logout', function() {
+wechat.on('login', startConsole);
+wechat.on('logout', () => {
   logger.info('Logout.');
   rl.close();
 });
 
-wechat.on('login', startConsole);
 wechat.login();
 
 function startConsole(user) {
