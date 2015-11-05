@@ -1,11 +1,9 @@
-"use strict"
+'use strict';
 
-var _ = require('lodash');
 var readline = require('readline');
 var WechatClient = require('./lib/wechat_client');
 var logger = require('./lib/logger');
 var commands = require('./lib/commands');
-
 
 var wechat = new WechatClient();
 var rl = readline.createInterface({
@@ -14,7 +12,6 @@ var rl = readline.createInterface({
   terminal: true,
   completer: completer,
 });
-
 
 wechat.on(WechatClient.EVENTS.ERROR, () => { rl.close(); });
 wechat.on(WechatClient.EVENTS.CHAT_CHANGE, () => { updatePrompt(); });
@@ -26,7 +23,7 @@ wechat.on(WechatClient.EVENTS.LOGOUT, () => {
 
 wechat.login();
 
-function startConsole(user) {
+function startConsole() {
   logger.info('Login successfully.');
 
   updatePrompt();
@@ -43,7 +40,7 @@ function onUserInput(msg) {
 }
 
 function onPreExit() {
-  rl.question('Are you sure you want to exit?(y/N)', function(answer) {
+  rl.question('Are you sure you want to exit?(y/N)', (answer) => {
     if (answer.match(/^y(es)?$/i)) {
       rl.close();
     } else {
@@ -70,6 +67,6 @@ function updatePrompt() {
 }
 
 function completer(line) {
-  var hits = commands.ALL_CMD.filter((c) => { return c.indexOf(line) == 0 });
+  var hits = commands.ALL_CMD.filter((c) => { return c.indexOf(line) === 0; });
   return [hits.length ? hits : commands.ALL_CMD, line];
 }
