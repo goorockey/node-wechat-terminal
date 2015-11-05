@@ -4,7 +4,7 @@
   "description": "Wechat client in terminal",
   "main": "cli.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node node_modules/xo/cli.js && node node_modules/mocha/bin/mocha",
     "start": "node cli.js"
   },
   "keywords": [
@@ -31,6 +31,7 @@
     "xml2js": "^0.4.13"
   },
   "devDependencies": {
+    "chai": "^3.4.0",
     "mocha": "^2.3.3",
     "xo": "^0.10.1"
   },
@@ -41,17 +42,41 @@
       "es6"
     ],
     "rules": {
-      "indent": [2, 2],
+      "indent": [
+        2,
+        2,
+        {
+          "SwitchCase": 1
+        }
+      ],
       "no-eval": 0,
       "no-inline-comments": 0,
-      "camelcase": 1,
+      "camelcase": 0,
       "no-unused-vars": 1,
-      "comma-dangle": [1, "always-multiline"],
-      "arrow-parens": [2, "always"],
-      "space-before-function-paren": [2, "never"],
-      "object-curly-spacing": [2, "never"],
-      "object-curly-spacing": [2, "always"],
-      "brace-style": [2, "1tbs", { "allowSingleLine": true }]
+      "no-warning-comments": 0,
+      "comma-dangle": [
+        1,
+        "always-multiline"
+      ],
+      "arrow-parens": [
+        2,
+        "always"
+      ],
+      "space-before-function-paren": [
+        2,
+        "never"
+      ],
+      "object-curly-spacing": [
+        2,
+        "always"
+      ],
+      "brace-style": [
+        2,
+        "1tbs",
+        {
+          "allowSingleLine": true
+        }
+      ]
     }
   }
 }

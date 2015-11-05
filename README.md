@@ -1,4 +1,7 @@
 # node-wechat-terminal
+
+[![Build Status](https://travis-ci.org/goorockey/node-wechat-terminal.svg?branch=master)](https://travis-ci.org/goorockey/node-wechat-terminal)
+
 Wechat client in terminal
 
 ## Getting Started
