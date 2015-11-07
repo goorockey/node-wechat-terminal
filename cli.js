@@ -1,9 +1,11 @@
 'use strict';
 
 var readline = require('readline');
+var chalk = require('chalk');
 var WechatClient = require('./lib/wechat_client');
 var logger = require('./lib/logger');
 var commands = require('./lib/commands');
+
 
 var wechat = new WechatClient();
 var rl = readline.createInterface({
@@ -56,14 +58,14 @@ function onExit() {
 function updatePrompt() {
   var prompt = 'wechat';
   if (wechat.isLogined()) {
-    prompt = wechat.getUser();
+    prompt = chalk.bold.blue(wechat.getUser());
 
     var chat = wechat.getChat();
     if (chat) {
-      prompt += ' => ' + chat;
+      prompt += chalk.yellow(' => ') + chalk.bold.blue(chat);
     }
   }
-  rl.setPrompt(prompt + '> ');
+  rl.setPrompt(prompt + chalk.yellow('> '));
 }
 
 function completer(line) {
