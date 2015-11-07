@@ -6,11 +6,59 @@ Wechat client in terminal
 
 ## Getting Started
 
-    $ npm install # or npm install --registry=https://registry.npm.taobao.org
-    $ node cli.js
+    $ npm install -g node-wechat-terminal
+    $ wechat-terminal
 
     (Login by scanning QRCode)
+
     UserName> \h  # show help message
+    COMMAND              DESCRIPTION
+    \h                   Print this help information
+    \debug               Debug mode
+    \network             Display network history
+    \logout              Logout
+    \user                Display user info
+    \m                   Send message
+    \chat                List chat or select chat target by index
+    \contact             List contact or select chat target by index
+    \search              Search in contact
+    \history             Display history of chat
+    \room                List room in contact
+    \member              List member of room
+
+## Features
+
+- List contacts
+
+        Me>\contact
+        Contacts:
+        #0 Me
+        #1 James
+        #2 Stephen
+        ...
+
+- Search user in contacts
+
+        Me>\search a
+        #1 James
+        #6 Harden
+
+- Select target to chat by contact index, and send message by `\m`
+
+        Me>\contact 1
+        Me => James>\m Hi
+
+- Display chat history
+
+        Me => James>\history
+        Chat history with James:
+        TIME      FROM    TO      MESSAGE
+        14:00:00  Me      James   Hi
+
+- Logout
+
+        Me>\logout # or Ctrl-C / Ctrl-D
+
 
 ## License
 
