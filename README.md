@@ -48,7 +48,7 @@ Wechat client in terminal
         #1 James
         #6 Harden
 
-- Select target to chat by contact index, and send message by `\m`
+- Select target to chat by contact index, and send message with `\m`
 
         Me>\contact 1
         Me => James>\m Hi
