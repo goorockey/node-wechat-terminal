@@ -1,6 +1,11 @@
 # node-wechat-terminal
 
+[![NPM](https://nodei.co/npm/node-wechat-terminal.png?downloads=true)](https://nodei.co/npm/node-wechat-terminal)
+
 [![Build Status](https://travis-ci.org/goorockey/node-wechat-terminal.svg?branch=master)](https://travis-ci.org/goorockey/node-wechat-terminal)
+[![Codacy Badge](https://api.codacy.com/project/badge/grade/892f526d24c34902aca382a4e35b0842)](https://www.codacy.com/app/kelvingu616/node-wechat-terminal)
+[![dependencies](https://david-dm.org/goorockey/node-wechat-terminal.png)](https://david-dm.org/goorockey/node-wechat-terminal)
+[![devDependencies](https://david-dm.org/goorockey/node-wechat-terminal/dev-status.png)](https://david-dm.org/goorockey/node-wechat-terminal#info=devDependencies)
 
 Wechat client in terminal
 
