@@ -30,7 +30,7 @@ function startConsole() {
   logger.info('Login successfully.');
 
   updatePrompt();
-  rl.prompt();
+  rl.prompt(true);
 
   rl.on('line', onUserInput)
   .on('SIGINT', onPreExit)
@@ -38,8 +38,9 @@ function startConsole() {
 }
 
 function onUserInput(msg) {
+  rl.pause();
   commands.parse(msg, wechat);
-  rl.prompt();
+  rl.prompt(true);
 }
 
 function onPreExit() {
@@ -47,7 +48,7 @@ function onPreExit() {
     if (answer.match(/^y(es)?$/i)) {
       rl.close();
     } else {
-      rl.prompt();
+      rl.prompt(true);
     }
   });
 }
