@@ -9,6 +9,10 @@
 
 Wechat client in terminal
 
+## Requirement
+
+- nodejs (>=4.0.0)
+
 ## Getting Started
 
     $ npm install -g node-wechat-terminal
@@ -23,7 +27,6 @@ Wechat client in terminal
     \network             Display network history
     \logout              Logout
     \user                Display user info
-    \m                   Send message
     \chat                List chat or select chat target by index
     \contact             List contact or select chat target by index
     \back                Quit chat
@@ -49,10 +52,10 @@ Wechat client in terminal
         #1 James
         #6 Harden
 
-- Select target to chat by contact index, and send message with `\m`
+- Select target to chat by contact index, and send message
 
         Me>\contact 1
-        Me => James>\m Hi
+        Me => James>Hi
 
 - Display chat history
 
