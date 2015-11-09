@@ -26,6 +26,7 @@ Wechat client in terminal
     \m                   Send message
     \chat                List chat or select chat target by index
     \contact             List contact or select chat target by index
+    \back                Quit chat
     \search              Search in contact
     \history             Display history of chat
     \room                List room in contact
