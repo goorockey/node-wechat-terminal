@@ -65,6 +65,9 @@ Wechat client in terminal
 
         Me>\logout # or Ctrl-C / Ctrl-D
 
+## Inspired by
+
+- [uProxy_wechat](https://github.com/LeMasque/uProxy_wechat)
 
 ## License
 
