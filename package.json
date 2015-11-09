@@ -32,7 +32,7 @@
     "chalk": "^1.1.1",
     "columnify": "^1.5.2",
     "lodash": "^3.10.1",
-    "qrcode-terminal": "^0.10.0",
+    "qrcode-terminal": "git+https://github.com/goorockey/qrcode-terminal.git#b126147b9c9196f3e5c7819207e8064ac68e91ff",
     "request-promise": "^1.0.2",
     "tough-cookie-filestore": "0.0.1",
     "winston": "^1.1.1",
