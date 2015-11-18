@@ -3,6 +3,7 @@
 [![NPM](https://nodei.co/npm/node-wechat-terminal.png?downloads=true)](https://nodei.co/npm/node-wechat-terminal)
 
 [![Build Status](https://travis-ci.org/goorockey/node-wechat-terminal.svg?branch=master)](https://travis-ci.org/goorockey/node-wechat-terminal)
+[![node version](https://img.shields.io/badge/node.js-%3E%3D4.0.0-brightgreen.svg)](http://nodejs.org/download)
 [![Codacy Badge](https://api.codacy.com/project/badge/grade/892f526d24c34902aca382a4e35b0842)](https://www.codacy.com/app/kelvingu616/node-wechat-terminal)
 [![dependencies](https://david-dm.org/goorockey/node-wechat-terminal.png)](https://david-dm.org/goorockey/node-wechat-terminal)
 [![devDependencies](https://david-dm.org/goorockey/node-wechat-terminal/dev-status.png)](https://david-dm.org/goorockey/node-wechat-terminal#info=devDependencies)
