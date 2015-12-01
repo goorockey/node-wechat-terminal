@@ -18,7 +18,7 @@ var rl = readline.createInterface({
 
 wechat.on(WechatClient.EVENTS.ERROR, () => { rl.close(); });
 wechat.on(WechatClient.EVENTS.CHAT_CHANGE, () => { updatePrompt(); });
-wechat.on(WechatClient.EVENTS.LOGIN, startConsole);
+wechat.on(WechatClient.EVENTS.LOGIN, () => { startConsole(); });
 wechat.on(WechatClient.EVENTS.LOGOUT, () => {
   logger.info('Logout.');
   rl.close();
