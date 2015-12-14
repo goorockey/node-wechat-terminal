@@ -25,8 +25,6 @@ Wechat client in terminal
     UserName> \h  # show help message
     COMMAND              DESCRIPTION
     \h                   Print this help information
-    \debug               Debug mode
-    \network             Display network history
     \logout              Logout
     \user                Display user info
     \chat                List chat or select chat target by index
