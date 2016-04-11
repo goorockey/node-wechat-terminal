@@ -2263,7 +2263,13 @@
                 t = "weixin.qq.com",
                 o = "file.wx.qq.com",
                 n = "webpush.weixin.qq.com";
-            e.indexOf("wx2.qq.com") > -1 ? (t = "weixin.qq.com", o = "file2.wx.qq.com", n = "webpush2.weixin.qq.com") : e.indexOf("qq.com") > -1 ? (t = "weixin.qq.com", o = "file.wx.qq.com", n = "webpush.weixin.qq.com") : e.indexOf("web1.wechat.com") > -1 ? (t = "wechat.com", o = "file1.wechat.com", n = "webpush1.wechat.com") : e.indexOf("web2.wechat.com") > -1 ? (t = "wechat.com", o = "file2.wechat.com", n = "webpush2.wechat.com") : e.indexOf("wechat.com") > -1 ? (t = "wechat.com", o = "file.wechat.com", n = "webpush.wechat.com") : e.indexOf("web1.wechatapp.com") > -1 ? (t = "wechatapp.com", o = "file1.wechatapp.com", n = "webpush1.wechatapp.com") : (t = "wechatapp.com", o = "file.wechatapp.com", n = "webpush.wechatapp.com");
+            e.indexOf("wx2.qq.com") > -1 ? (t = "weixin.qq.com", o = "file2.wx.qq.com", n = "webpush2.weixin.qq.com") :
+            e.indexOf("qq.com") > -1 ? (t = "weixin.qq.com", o = "file.wx.qq.com", n = "webpush.weixin.qq.com") :
+            e.indexOf("web1.wechat.com") > -1 ? (t = "wechat.com", o = "file1.wechat.com", n = "webpush1.wechat.com") :
+            e.indexOf("web2.wechat.com") > -1 ? (t = "wechat.com", o = "file2.wechat.com", n = "webpush2.wechat.com") :
+            e.indexOf("wechat.com") > -1 ? (t = "wechat.com", o = "file.wechat.com", n = "webpush.wechat.com") :
+            e.indexOf("web1.wechatapp.com") > -1 ? (t = "wechatapp.com", o = "file1.wechatapp.com", n = "webpush1.wechatapp.com") :
+            (t = "wechatapp.com", o = "file.wechatapp.com", n = "webpush.wechatapp.com");
             var r = navigator.language || navigator.browserLanguage;
             r || (r = "zh-cn"), r = r.split("-"), r = r[0].toLowerCase() + "_" + (r[1] || "").toUpperCase();
             var a = {
