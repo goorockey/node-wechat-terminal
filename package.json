@@ -1,6 +1,6 @@
 {
   "name": "node-wechat-terminal",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Wechat client in terminal",
   "main": "cli.js",
   "scripts": {
