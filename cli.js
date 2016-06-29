@@ -6,6 +6,7 @@ var chalk = require('chalk');
 var WechatClient = require('./lib/wechat_client');
 var logger = require('./lib/logger');
 var commands = require('./lib/commands');
+var notifier = require('node-notifier');
 
 
 var wechat = new WechatClient();
@@ -22,6 +23,13 @@ wechat.on(WechatClient.EVENTS.LOGIN, () => { startConsole(); });
 wechat.on(WechatClient.EVENTS.LOGOUT, () => {
   logger.info('Logout.');
   rl.close();
+});
+wechat.on(WechatClient.EVENTS.MESSAGE, (data) => {
+  rl.prompt(true);
+  notifier.notify({
+    title: data.from,
+    message: data.message,
+  });
 });
 
 wechat.login();
