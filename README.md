@@ -7,7 +7,6 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/grade/892f526d24c34902aca382a4e35b0842)](https://www.codacy.com/app/kelvingu616/node-wechat-terminal)
 [![dependencies](https://david-dm.org/goorockey/node-wechat-terminal.png)](https://david-dm.org/goorockey/node-wechat-terminal)
 [![devDependencies](https://david-dm.org/goorockey/node-wechat-terminal/dev-status.png)](https://david-dm.org/goorockey/node-wechat-terminal#info=devDependencies)
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/goorockey/node-wechat-terminal/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 Wechat client in terminal
 
