@@ -34,7 +34,7 @@
     "lodash": "^4.13.1",
     "node-notifier": "^4.6.0",
     "qrcode-terminal": "git+https://github.com/goorockey/qrcode-terminal.git",
-    "request": "2.71.0",
+    "request": "2.76.0",
     "request-promise": "3.0.0",
     "winston": "^2.1.1",
     "xml2js": "^0.4.13"
